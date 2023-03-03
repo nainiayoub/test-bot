@@ -1,0 +1,14 @@
+alabaster==0.7.12
+Flask==1.0.2
+nltk==3.4
+numpy==1.16.2
+pandas==0.24.2
+PyArabic==0.6.7
+PyYAML==3.13
+requests==2.21.0
+scikit-learn==0.20.3
+Tashaphyne==0.3.4.1
+textblob==0.15.3
+transliterate==1.10.2
+gunicorn==19.7.1
+emoji==0.5.4
