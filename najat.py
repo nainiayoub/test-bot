@@ -15,7 +15,7 @@ from Credentials import *
 
 
       
-questions, answers = nj.read_yaml(dir_path)
+# questions, answers = nj.read_yaml(dir_path)
 
 
 
@@ -74,19 +74,19 @@ def post_message():
                         elif(msg['message']['quick_reply']['payload']=="8350"): 
                             nj.call_button(UserId,'8350')
                             return "ok", 200 
-                        else:
-                            UserId=msg['sender']['id']
-                            userText=msg['message']['text']
-                            #my ID: 2869295273124268
-                            najat_response=str(nj.response(UserId,userText,questions, answers))
+                        # else:
+                        #     UserId=msg['sender']['id']
+                        #     userText=msg['message']['text']
+                        #     #my ID: 2869295273124268
+                        #     najat_response=str(nj.response(UserId,userText,questions, answers))
                         nj.send_najat_message(UserId,najat_response)  
                             
-                    else:
-                        UserId=msg['sender']['id']
-                        userText=msg['message']['text']
-                        #my ID: 2869295273124268
-                        najat_response=str(nj.response(UserId,userText, questions, answers))
-                        nj.send_najat_message(UserId,najat_response)  
+                    # else:
+                    #     UserId=msg['sender']['id']
+                    #     userText=msg['message']['text']
+                    #     #my ID: 2869295273124268
+                    #     najat_response=str(nj.response(UserId,userText, questions, answers))
+                    #     nj.send_najat_message(UserId,najat_response)  
         return "ok", 200
       
  

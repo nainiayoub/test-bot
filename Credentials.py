@@ -11,7 +11,7 @@ import os
 WEBHOOK_TOKEN = os.environ['WEBHOOK_TOKEN']
 PAGE_ACCESS_TOKEN= os.environ['PAGE_ACCESS_TOKEN']
 GRAPH_API_URL = os.environ['GRAPH_API_URL']
-dir_path = os.environ['dir_path']
+# dir_path = os.environ['dir_path']
 
 
 
