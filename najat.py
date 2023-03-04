@@ -22,7 +22,7 @@ questions, answers = nj.read_yaml(dir_path)
 app= Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
+@app.route('/webhooks', methods=['GET'])
 def verify_webhook():
     mode =request.args.get("hub.mode")
     token= request.args.get("hub.verify_token")
