@@ -14,11 +14,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 import random
 import yaml
 import re
-from emoji import UNICODE_EMOJI
+# from emoji import UNICODE_EMOJI
 from Credentials import *
 
-def is_emoji(s):
-    return s in UNICODE_EMOJI
+# def is_emoji(s):
+#     return s in UNICODE_EMOJI
 
 def read_yaml(dir_path):
     files_list = os.listdir(dir_path + os.sep)
