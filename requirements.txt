@@ -11,4 +11,4 @@ Tashaphyne
 textblob
 transliterate
 gunicorn
-emoji
+emoji==1.7
