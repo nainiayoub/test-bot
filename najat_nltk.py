@@ -20,26 +20,26 @@ from Credentials import *
 # def is_emoji(s):
 #     return s in UNICODE_EMOJI
 
-# def read_yaml(dir_path):
-#     files_list = os.listdir(dir_path + os.sep)
-#     questions = list()
-#     answers = list()
-#     for filepath in files_list:
-#         stream = open( dir_path + os.sep + filepath , 'rb')
-#         docs = yaml.safe_load(stream)
-#         conversations = docs['conversations']
-#         for con in conversations:
-#             if len( con ) > 1 :
-#                 questions.append(con[0])
-#                 replies = con[ 1 : ]
-#                 temp=list()
-#                 for rep in replies:
-#                     temp.append(rep)
-#                 answers.append( temp )
-#             elif len( con )> 1:
-#                 questions.append(con[0])
-#                 answers.append(con[1])
-#     return questions, answers
+def read_yaml(dir_path):
+    files_list = os.listdir(dir_path + os.sep)
+    questions = list()
+    answers = list()
+    for filepath in files_list:
+        stream = open( dir_path + os.sep + filepath , 'rb')
+        docs = yaml.safe_load(stream)
+        conversations = docs['conversations']
+        for con in conversations:
+            if len( con ) > 1 :
+                questions.append(con[0])
+                replies = con[ 1 : ]
+                temp=list()
+                for rep in replies:
+                    temp.append(rep)
+                answers.append( temp )
+            elif len( con )> 1:
+                questions.append(con[0])
+                answers.append(con[1])
+    return questions, answers
 
 
 
