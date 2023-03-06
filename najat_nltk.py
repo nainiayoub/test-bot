@@ -150,62 +150,11 @@ def dont_know_quick_reply(sender_id,answers,questions):
         "access_token": PAGE_ACCESS_TOKEN
     }
 
-    persistent_menu = {
-      "persistent_menu": [
-        {
-            "locale": "default",
-            "composer_input_disabled": true,
-            "call_to_actions": [
-                {
-                    "type": "postback",
-                    "title": "منصة 8350",
-                    "payload": "8350"
-                },
-                {
-                    "type": "postback",
-                      "title": "شكاية مستعجلة",
-                    "payload": "appli"
-                },
-                {
-                    "type": "postback",
-                    "title": "أرقام الطوارئ",
-                    "payload": "num"
-                
-                },
-				{
-                    "type": "postback",
-                    "title": "شنو هو العنف أصلاً؟",
-                    "payload": "violence"
-                
-                },
-				{
-                    "type": "postback",
-                    "title": "تعلم و تمكين",
-                    "payload": "learn"
-                
-                },
-				{
-                    "type": "postback",
-                    "title": "عمل و مقاولة",
-                    "payload": "work"
-                
-                },
-				{
-                    "type": "postback",
-                    "title": "معلومات إضافية",
-                    "payload": "else"
-                
-                }
-            ]
-        }
-    ]
-    }
-
     response = requests.post(
         GRAPH_API_URL,
         params=params,
         headers= headers,
-        data=persistent_menu
+        data=data
     )
 
     if response.status_code !=200:
